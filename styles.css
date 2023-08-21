@@ -1,0 +1,125 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .slider-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+  
+  .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  
+  .slider-bar {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .slider-bar-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .slider-bar-dot.active {
+    background-color: #333;
+  }
+  
+  .add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0c428e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #0d46a9;
+  }
+
+  .product-slider {
+    position: relative;
+    overflow: hidden;
+}
+  
+  .product-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  .product-card .card {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+  }
+  
+
+.product-card {
+    flex: 0 0 100%; 
+    max-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Styles for mobile view */
+@media screen and (max-width: 767px) {
+    .slider {
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .product-card {
+        flex: 0 0 calc(50% - 10px); 
+        margin: 0 5px;
+    }
+}
+
+/* Styles for desktop view */
+@media screen and (min-width: 768px) {
+    .product-slider {
+        max-width: 100%; 
+    }
+
+    .slider {
+        flex-wrap: nowrap;
+        overflow-x: auto; 
+    }
+
+    .product-card {
+        flex: 0 0 auto;
+        margin: 0 5px;
+    }
+}
