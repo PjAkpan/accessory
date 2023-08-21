@@ -83,14 +83,15 @@ body {
   
 
 .product-card {
-    flex: 0 0 100%; 
-    max-width: 100%;
+    flex: 0 0 90%; 
+    max-width: 90%;
     padding: 20px;
     box-sizing: border-box;
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     margin-right: 10px;
     border-radius: 5px;
+ 
 }
 
 /* Styles for mobile view */
@@ -104,6 +105,14 @@ body {
     .product-card {
         flex: 0 0 calc(50% - 10px); 
         margin: 0 5px;
+    }
+
+    .product-card:hover .overlay-text.mobile {
+        display: block;
+    }
+
+    .overlay-text.mobile {
+        top: 40%; /* Adjust as needed for mobile */
     }
 }
 
@@ -122,4 +131,27 @@ body {
         flex: 0 0 auto;
         margin: 0 5px;
     }
+
+    .product-card:hover .overlay-text.desktop {
+        display: block;
+    }
+}
+
+
+.overlay-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    display: none; 
+}
+
+.overlay-text.desktop {
+    padding-top: 30px; 
 }
